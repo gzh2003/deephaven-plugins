@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 
@@ -14,16 +15,9 @@ export default defineConfig(({ mode }) => ({
       external: [
         'react',
         'react-dom',
-        'redux',
-        'react-redux',
-        // Externalize all Deephaven dependencies to reduce bundle size and maintain proper context for themes, etc.
-        '@deephaven/components',
-        '@deephaven/dashboard',
         '@deephaven/icons',
-        '@deephaven/jsapi-bootstrap',
-        '@deephaven/jsapi-types',
         '@deephaven/log',
-        '@deephaven/plugin'
+        '@deephaven/plugin',
       ],
     },
   },
